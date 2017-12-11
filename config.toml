@@ -1,3 +1,53 @@
-baseURL = "http://example.org/"
+baseURL = "https://mracos.me"
 languageCode = "en-us"
-title = "My New Hugo Site"
+title = "as a designer, i'm a good devops"
+theme = "aerial"
+
+[params]
+  name = "Marcos Ferreira"
+  about = "developer, kinda devops; good at failing and giving up on things"
+  copyright = "Untitled"
+  #Disable the scrolling background by entering any string for bg_scroll. Enable by leaving bg_scroll empty.
+  bg_scroll = ""
+  favicon = "favicon.ico"
+
+
+[[params.social]]
+  medium = "Linkedin"
+  icon = "linkedin"
+  link = "https://linkedin.com/in/ffmarcos"
+
+[[params.social]]
+  medium = "Github"
+  icon = "github"
+  link = "https://github.com/mracos"
+
+[[params.social]]
+  medium = "Gitlab"
+  icon = "gitlab"
+  link = "https://gitlab.com/mracos"
+
+[[params.social]]
+  medium = "Lastfm"
+  icon = "lastfm"
+  link = "https://www.last.fm/user/mrcsferr"
+
+[[params.social]]
+  medium = "Instagram"
+  icon = "instagram"
+  link = "https://instagram.com/cactomarcos"
+
+[[params.social]]
+  medium = "Email"
+  icon = "envelope-o"
+  link = "mailto:marcosp4f@gmail.com"
+
+[[params.social]]
+  medium = "Wakatime"
+  icon = "clock-o"
+  link = "https://wakatime.com/@mracos"
+
+[[params.social]]
+  medium = "Steam"
+  icon = "steam"
+  link = "https://steamcommunity.com/id/merkkp"
