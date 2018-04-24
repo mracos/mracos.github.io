@@ -4,5 +4,28 @@ html(lang="en")
     meta(charset="utf-8")
     meta(content="i3=edge" http-equiv="x-ua-compatible")
     meta(name="viewport" content="width=device-width, initial-scale=1")
+    title.
+      marcos ferreira
   body
-    h1 Hello World
+    main
+      h1 Marcos Ferreira
+      h3 fullstack developer that is more devops than designer
+      p Now i added the web standards &trade; like sass, pub and webpack :)
+
+      ul
+        - var links = {
+        -  "github": "//github.com/mracos",
+        -  "gitlab": "//gitlab.com/mracos",
+        -  "wakatime": "//wakatime.com/@mracos",
+        -  "resume": "//resume.mracos.me"
+        - }
+        each link, name in links
+          li
+            a(target="_blank" href=link)= name
+
+
+    script(type="text/javascript" src="https://www.google-analytics.com/analytics.js" async defer)
+    script.
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA--115754396-1', 'auto');
+      ga('send', 'pageview');
