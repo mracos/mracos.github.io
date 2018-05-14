@@ -7,21 +7,26 @@ html(lang="en")
     title.
       marcos ferreira
   body
-    main
-      h1 Marcos Ferreira
-      h3 fullstack developer that is more devops than designer
-      p Now i added the web standards &trade; like sass, pub and webpack :)
-
-      ul
-        - var links = {
-        -  "github": "//github.com/mracos",
-        -  "gitlab": "//gitlab.com/mracos",
-        -  "wakatime": "//wakatime.com/@mracos",
-        -  "resume": "//resume.mracos.me"
-        - }
-        each link, name in links
-          li
-            a(target="_blank" href=link)= name
+    main(class="main")
+      img(class="main__photo" src="~@/images/me.jpg")
+      div(class="main-bio")
+        h1(class="main-bio__name") Marcos Ferreira
+        //- h3(class="main-bio__motto") fullstack developer that is more devops than designer
+        div(class="main-bio__mini-bio")
+          p.
+            I'm a fullstack developer based in
+            #[a(href="") Belém/PA - Brasil].
+        ul(class="main-bio__links")
+          - var links = {
+          -  "github": "//github.com/mracos",
+          -  "gitlab": "//gitlab.com/mracos",
+          -  "wakatime": "//wakatime.com/@mracos",
+          -  "resume": "//resume.mracos.me"
+          - }
+          each link, name in links
+            li(class="main__links-name")
+              a(class="main__links-link" target="_blank" href=link)= name
+        p(class="main__disclaimer") Now with the web standards &trade; like sass, pub and webpack :)
 
 
     script(type="text/javascript" src="https://www.google-analytics.com/analytics.js" async defer)
