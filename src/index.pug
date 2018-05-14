@@ -11,21 +11,23 @@ html(lang="en")
       img(class="main__photo" src="~@/images/me.jpg")
       div(class="main-bio")
         h1(class="main-bio__name") Marcos Ferreira
-        //- h3(class="main-bio__motto") fullstack developer that is more devops than designer
+        h4 always learning and breaking things, (more building than breaking tho).
         div(class="main-bio__mini-bio")
           p.
             I'm a fullstack developer based in
             #[a(href="") Belém/PA - Brasil].
-        ul(class="main-bio__links")
-          - var links = {
-          -  "github": "//github.com/mracos",
-          -  "gitlab": "//gitlab.com/mracos",
-          -  "wakatime": "//wakatime.com/@mracos",
-          -  "resume": "//resume.mracos.me"
-          - }
-          each link, name in links
-            li(class="main__links-name")
-              a(class="main__links-link" target="_blank" href=link)= name
+          p.
+            With experience on all the (full) stack (from SASS to Docker), I prefer to work with backend and ops.
+            Currently interested in: Elixir/Erlang, Ruby.
+          p.
+            I love open source (and is something i'm always trying to do more), you can check some half-assed projects and some useless things (or not) on my #[a(href="") github] or #[a(href="") gitlab]
+          p.
+            Currently working remote (yay! remote ftw) mostly with front-end (javascript, vuejs and sass) but also using phoenix/elixir and ruby on rails.
+            You can check what i'm coding on #[a(href="") wakatime] (not all the work is coding tho).
+          p.
+            If you rather see what i have done, you can check my #[a(href="") resume].
+          p.
+            Something to say? #[a(href="") mailme]
         p(class="main__disclaimer") Now with the web standards &trade; like sass, pub and webpack :)
 
 
