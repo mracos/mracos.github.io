@@ -1,12 +1,75 @@
-html
-  height: 100vh
-  width: 100vw
+$text-base-family: Georgia, Helvetica, Arial, sans-serif
 
-.main
+$text-small-size: 14px
+$text-base-size: 16px
+$text-title-size: 30px
+
+$main-page-left-border: 7px
+
+$text-color: #333
+$text-muted-color: #666
+$text-important-color: #111
+
+$main-color: #6639A6
+
+$image-me-width: 298px
+
+html, body
+  font-family: $text-base-family
+  height: 100%
+  margin: 0
+  padding: 0
+  width: calc(100vw - $main-page-left-border)
+  color: $text-color
+  font-size: $text-base-size
+html
+  border-left: $main-color $main-page-left-border solid
+h1, h2, h3, h4, h5, h6, strong, b
+  color: $text-important-color
+  font-size: $text-title-size
+  font-family: Arial
+a
+  color: $main-color
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+  &:visited
+    color: none
+.container
   display: flex
-  flex-direction: row
-  align-items: center
-  justify-content: center
-  .main__photo
-    height: 500px
-    filter: grayscale(100%)
+  flex-direction: column
+  margin-left: 10px
+  max-width: 500px
+  height: 100%
+  margin-left: auto
+  margin-right: auto
+  @media screen and (max-width: 720px)
+    max-width: 300px
+    margin: 0
+    margin-left: 10px
+  .header
+    margin-top: 10px
+    margin-bottom: 0
+    .header__name
+      margin: 0
+    .header__motto
+      line-height: 1
+      margin: 0
+      color: $text-muted-color
+    .header__sub-motto
+      font-size: $text-small-size
+  .main
+    display: flex
+    flex-direction: column
+    margin-top: auto
+    margin-bottom: auto
+    .main__photo
+      height: auto
+      width: 375px
+      @media screen and (max-width: 720px)
+        width: 275px
+  .footer
+    .footer__disclaimer
+    & *
+      margin-top: 5px
+      margin-bottom: 5px

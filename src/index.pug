@@ -7,43 +7,17 @@ html(lang="en")
     title.
       marcos ferreira
   body
-    main(class="main")
-      img(class="main__photo" src="~@/images/me.jpg")
-      div(class="main-bio")
-        h1(class="main-bio__name") Marcos Ferreira
-        h4 always learning and breaking things, (more building and learning than breaking tho).
-        div(class="main-bio__mini-bio")
-          p.
-            I'm a fullstack developer based in
-            #[a(href="//pt.wikipedia.org/wiki/Bel%C3%A9m_(Par%C3%A1)") Belém/PA - Brasil].
-            Currently interested in: Elixir, Ruby.
-          p.
-            Experienced on all the stack (from javascript to ansible),
-            I rather work with backend and ops tho.
-          p.
-            I love open source (and is something i'm always trying to do more),
-            you can check some half-assed projects and some useless things (or not)
-            on my #[a(href="//github.com/mracos") github]
-            or #[a(href="//gitlab.com/mracos") gitlab]
-          p Currently working remote fullstack (yay!) with:
-            ul
-              li javascript
-              li vuejs
-              li sass
-              li phoenix/elixir
-              li ruby on rails
-            .
-              You can check what i'm coding on #[a(href="//wakatime.com/mracos") wakatime]
-              (code is not all what is part of the job tho :P).
-          p.
-            If you rather see what i have been doing, you can check my #[a(href="//resume.mracos.me") resume].
-          p.
-            Something to say? #[a(href="mailto:marcosp4f@gmail.com") mailme]
-        p(class="main__disclaimer").
-          Now this website is powered with the web standards &trade;
-          like sass, pub and webpack :)
-          (check it on #[a(href="//github.com/mracos/mracos.github.io") github])
-
+    div(class="container")
+      header(class="header")
+        h1(class="header__name") hi, I'm marcos ferreira
+        p(class="header__motto").
+          fullstack developer that is always learning and breaking things.
+        span(class="header__sub-motto") more learning than breaking tho :)
+      main(class="main")
+        img(class="main__photo" src="~@/images/me.jpg")
+      footer(class="footer")
+        p this website is powered by shiny web technologies &trade;
+        p check it on #[a(href="//github.com/mracos/mracos.github.io") github]
 
     script(type="text/javascript" src="https://www.google-analytics.com/analytics.js" async defer)
     script.
