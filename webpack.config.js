@@ -50,7 +50,13 @@ module.exports = {
       {
         test: /\.pug$/,
         use: [
-          'html-loader',
+          {
+            loader: 'html-loader',
+            options: {
+              // attrs: ['img:src', 'link:href', 'meta:content']
+              attrs: ['img:src', 'link:href']
+            }
+          },
           'pug-html-loader',
         ],
       },
@@ -60,6 +66,16 @@ module.exports = {
           loader: 'file-loader',
           options: {
             outputPath: 'images',
+          },
+        }],
+      },
+      {
+        test: /\.(ico|xml|webmanifest)$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: './',
           },
         }],
       },
