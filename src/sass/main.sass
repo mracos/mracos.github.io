@@ -1,10 +1,14 @@
-$text-base-family: Georgia, Helvetica, Arial, sans-serif
+$text-base-family: Courier New, monospace
+$title-base-family: Tahoma
 
 $text-small-size: 14px
 $text-base-size: 16px
 $text-title-size: 30px
 
 $main-page-left-border: 7px
+$desktop-left-margin: 10px
+$mobile-left-margin: 5px
+$main-max-height-desktop: 490px
 
 $text-color: #333
 $text-muted-color: #666
@@ -16,18 +20,21 @@ $image-me-width: 298px
 
 html, body
   font-family: $text-base-family
-  height: 100%
+  min-height: 100%
   margin: 0
   padding: 0
   width: calc(100vw - $main-page-left-border)
   color: $text-color
   font-size: $text-base-size
+
 html
   border-left: $main-color $main-page-left-border solid
-h1, h2, h3, h4, h5, h6, strong, b
+
+h1, h2, h3, h4, h5, h6
   color: $text-important-color
   font-size: $text-title-size
-  font-family: Arial
+  font-family: $title-base-family
+
 a
   color: $main-color
   text-decoration: none
@@ -35,40 +42,65 @@ a
     text-decoration: underline
   &:visited
     color: none
+
+p
+  line-height: 1.1
+
 .container
   display: flex
   flex-direction: column
-  margin-left: 10px
-  max-width: 500px
-  height: 100%
+  margin-left: $desktop-left-margin
+  max-width: 700px
+  min-height: 100vh
   @media screen and (max-width: 720px)
-    max-width: 300px
-    margin: 0
-    margin-left: 10px
+    margin-left: $mobile-left-margin
+    margin-right: 10px
+
   .header
     margin-top: 10px
-    margin-bottom: 0
+    margin-bottom: 10px
+
     .header__name
       margin: 0
+
     .header__motto
       line-height: 1
       margin: 0
       color: $text-muted-color
       font-size: 18px
+
     .header__sub-motto
       font-size: $text-small-size
       color: $text-muted-color
+
   .main
     display: flex
-    flex-direction: column
-    margin-top: auto
+    flex-direction: row
+    flex-wrap: wrap
+    /* margin-top: 10px
     margin-bottom: auto
+
     .main__photo
-      height: auto
-      width: 330px
+      height: $main-max-height-desktop
+      display: block
       @media screen and (max-width: 720px)
-        width: 275px
+        height: auto
+        height: 75vh
+
+    .main__bio
+      margin-left: $desktop-left-margin
+      width: 350px
+      max-height: $main-max-height-desktop
+      & p:first-child
+        margin-top: 0
+      @media screen and (max-width: 720px)
+        max-height: unset
+        width: 100%
+        margin-left: $mobile-left-margin
+        margin-top: 1em
+
   .footer
+    position: relative
     .footer__disclaimer
     & *
       margin-top: 5px
