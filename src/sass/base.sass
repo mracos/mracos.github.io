@@ -1,0 +1,35 @@
+html, body
+  font-family: $text-base-family
+  min-height: 100%
+  margin: 0
+  padding: 0
+  min-width: calc(100vw - $main-page-left-border)
+  color: $text-color
+  font-size: $text-base-size
+
+html
+  border-left: $main-color $main-page-left-border solid
+
+h1, h2, h3, h4, h5, h6
+  color: $text-important-color
+  font-size: $text-title-size
+  font-family: $title-base-family
+
+a
+  display: inline-block
+  color: $main-color
+  text-decoration: none
+  &:hover,visited
+    border-color: $main-color
+  &:after
+    display: block
+    content: ''
+    border-bottom: solid 1px $main-color
+    transform: scaleX(0)
+    transition: transform 150ms ease-in-out
+    transform-origin: 0% 50%
+  &:hover:after
+    transform: scaleX(1)
+
+p
+  line-height: 1.1
