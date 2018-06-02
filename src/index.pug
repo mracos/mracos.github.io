@@ -18,7 +18,7 @@ html(lang="en")
     meta(name="robots" content="index,follow")
     meta(property="og:type" content="website")
     meta(property="og:title" content="marcos ferreira")
-    meta(property="og:image" content="/images/me.jpg")
+    meta(property="og:image" content="/favicon.ico")
     meta(property="og:description" content="fullstack developer that is more devops than design")
     meta(property="og:site_name" content="marcos ferreira")
 
@@ -27,7 +27,7 @@ html(lang="en")
     meta(name="twitter:url" content="https://mracos.me")
     meta(name="twitter:title" content="Content Title")
     meta(name="twitter:description" content="fullstack developer that is more devops than design")
-    meta(name="twitter:image" content="/images/me.jpg")
+    meta(name="twitter:image" content="/favicon.ico")
     title.
       marcos ferreira
   body
@@ -35,12 +35,14 @@ html(lang="en")
       header(class="header")
         h1(class="header__name") hi, I'm marcos ferreira
         p(class="header__motto").
-          fullstack developer that is always learning and breaking things.
-        span(class="header__sub-motto") more learning than breaking tho :)
+            fullstack developer that is more devops than designer
       main(class="main")
         img(class="main__photo" src="~@/images/me.jpg")
       footer(class="footer")
-        p this website is powered by shiny web technologies &trade;
+        p.
+          this website is powered by
+          #[abbr(title="like sass, pub and webpack (and thank god no js)") shiny web technologies]
+          &trade;
         p check it on #[a(href="//github.com/mracos/mracos.github.io") github]
 
     script(type="text/javascript" src="https://www.google-analytics.com/analytics.js" async defer)
