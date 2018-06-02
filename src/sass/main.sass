@@ -23,7 +23,7 @@ html, body
   min-height: 100%
   margin: 0
   padding: 0
-  width: calc(100vw - $main-page-left-border)
+  min-width: calc(100vw - $main-page-left-border)
   color: $text-color
   font-size: $text-base-size
 
@@ -91,7 +91,7 @@ p
     .main__photo
       height: $main-max-height-desktop
       display: block
-      box-shadow: 2px 2px 10px black
+      box-shadow: 2px 2px 20px $text-color
       @media screen and (max-width: 720px)
         height: auto
         height: 75vh
