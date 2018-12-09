@@ -57,7 +57,14 @@ module.exports = {
               attrs: ['img:src', 'link:href']
             }
           },
-          'pug-html-loader',
+          {
+            loader: 'pug-html-loader',
+            options: {
+              data: {
+                NODE_ENV: process.env.NODE_ENV
+              }
+            }
+          }
         ],
       },
       {

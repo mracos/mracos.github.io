@@ -73,8 +73,9 @@ html(lang="en")
         p check it on #[a(href="//github.com/mracos/mracos.github.io") github]
 
 
-    script(type="text/javascript" src="https://www.google-analytics.com/analytics.js" async defer)
-    script.
-      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-      ga('create', 'UA--115754396-1', 'auto');
-      ga('send', 'pageview');
+    if NODE_ENV == 'production'
+      script(type="text/javascript" src="https://www.google-analytics.com/analytics.js" async defer)
+      script.
+        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+        ga('create', 'UA--115754396-1', 'auto');
+        ga('send', 'pageview');
