@@ -1,3 +1,5 @@
+- var description = "fullstack developer that is more devops than designer"
+
 doctype html
 html(lang="en")
   head
@@ -16,53 +18,33 @@ html(lang="en")
     include pug/meta/twitter.pug
 
     title.
-      marcos ferreira
+      marcos ferreira - #{description}
   body
-    div.container
-      header.header
-        h1.header__name hi, I'm marcos ferreira
-        p.header__motto.
-            fullstack developer that is more devops than designer
-      main.main
-        img.main__photo(src="~@/images/me.jpg")
-        div.main__bio
-          p
-            abbr.header__sub-motto(title="more learning than breaking tho :)")
-              em always learning and breaking things.
-          p.
-            i'm a software developer based in
-            #[a(href="//pt.wikipedia.org/wiki/Bel%C3%A9m_(Par%C3%A1)") Belém/PA - Brasil].
-            currently interested in: #[b Elixir], #[b Ruby] and #[b DevOps] related things.
-          p.
-            with experience on all the web stack (from #[em javascript] to #[em ansible]),
-            i rather work with backend though :).
-          p.
-            i love open source (and is something i'm always trying to do more),
-            you can check some half-assed projects, some useless things #[del or not] and maybe some contributions
-            on my #[a(href="//github.com/mracos") github]
-            or even #[a(href="//gitlab.com/mracos") gitlab]
-          p.
-            currently working remote with
-            #[b javascript (vuejs)], #[b elixir (phoenix)] and #[b ruby (on rails)].
-          p.
-            you can check what I've been coding these times on
-            #[a(href="//wakatime.com/mracos") wakatime],
-            if you rather see what I've been doing,
-            you can get my #[a(href="//resume.mracos.me") resume].
-          p.
-          p.
-            got something to say? #[a(href="mailto:marcosp4f@gmail.com") send a nice cat gif pls]
-      footer.footer
-        p.
-         this website is powered by
-          #[abbr(title="like sass, pub, webpack (and thank god no js)") shiny web technologies]
-          &trade;
-        p check it on #[a(href="//github.com/mracos/mracos.github.io") github]
+    header
+      h1 hi, I'm marcos ferreira
+      p #{description}
+      p
+        abbr(title="more learning than breaking tho :)")
+          em always learning and breaking things
+    main
+      img(src="~@/images/me.jpg")
+      ul
+          li #[a(href="//linkedin.com/in/mracos") linkedin]
+          li #[a(href="//github.com/mracos") github]
+          li #[a(href="//gitlab.com/mracos") gitlab]
+          li #[a(href="//wakatime.com/mracos") wakatime]
+          li #[a(href="//last.fm/user/mrcsferr") last fm]
+          li #[a(href="//mracos.github.io/resume") resume]
+    footer
+      p got something to say? #[a(href="mailto:marcosp4f@gmail.com") don't let your dreams be dreams]
+      p.
+       this website is powered by
+        #[abbr(title="like sass, pub, webpack (and thank god no js)") shiny web technologies]
+        &trade;
 
-
-    if NODE_ENV == 'production'
-      script(type="text/javascript" src="https://www.google-analytics.com/analytics.js" async defer)
-      script.
-        window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
-        ga('create', 'UA--115754396-1', 'auto');
-        ga('send', 'pageview');
+  if NODE_ENV == 'production'
+    script(type="text/javascript" src="https://www.google-analytics.com/analytics.js" async defer)
+    script.
+      window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+      ga('create', 'UA--115754396-1', 'auto');
+      ga('send', 'pageview');

@@ -1,62 +1,8 @@
-@import "variables"
-@import "base"
+img
+  height: 490px
+  box-shadow: 2px 2px 15px grey
 
-.container
+body
   display: flex
-  flex-direction: column
-  margin-left: $desktop-left-margin
-  max-width: 700px
-  min-height: 100vh
-  @media screen and (max-width: 720px)
-    margin-left: $mobile-left-margin
-    margin-right: 10px
-
-  .header
-    margin-top: 10px
-    margin-bottom: 10px
-
-    .header__name
-      margin: 0
-
-    .header__motto
-      line-height: 1
-      margin: 0
-      color: $text-muted-color
-      font-size: 18px
-
-    .header__sub-motto
-      font-size: $text-small-size
-      color: $text-muted-color
-
-  .main
-    display: flex
-    flex-direction: row
-    flex-wrap: wrap
-    margin-bottom: auto
-
-    .main__photo
-      height: $main-max-height-desktop
-      display: block
-      box-shadow: 2px 2px 15px $text-color
-      @media screen and (max-width: 720px)
-        height: auto
-        height: 75vh
-
-    .main__bio
-      margin-left: $desktop-left-margin
-      width: 350px
-      max-height: $main-max-height-desktop
-      & p:first-child
-        margin-top: 0
-      @media screen and (max-width: 720px)
-        max-height: unset
-        width: 100%
-        margin-left: $mobile-left-margin
-        margin-top: 1em
-
-  .footer
-    position: relative
-    .footer__disclaimer
-    & *
-      margin-top: 5px
-      margin-bottom: 5px
+  flex: 1
+  justify-content: space-around
