@@ -1,9 +1,56 @@
 @import "~normalize.css"
-img
-  height: 490px
-  box-shadow: 2px 2px 15px grey
+
+$text-color: #000
+$text-size: 18px
+$mobile-breakpoint: 720px
+$main-color: #6639a6
+
+html, body
+  min-height: 100%
+
+html
+  border-left: 5px solid $main-color
 
 body
   display: flex
-  flex: 1
-  justify-content: space-around
+  font-family: Geneva, Lucida Sans Unicode
+  width: $mobile-breakpoint
+  margin-left: auto
+  margin-right: auto
+  font-size: $text-size
+
+  @media screen and (max-width: $mobile-breakpoint)
+    width: 100%
+    flex-wrap: wrap-reverse
+
+main
+  display: block
+  text-align: center
+  margin: 10px
+
+img
+  display: block
+  height: 490px
+  box-shadow: 2px 2px 15px grey
+  margin: 10px
+
+  @media screen and (max-width: $mobile-breakpoint)
+    margin-left: auto
+    margin-right: auto
+
+ul
+  list-style: none
+  padding: 0
+
+h1
+  margin-top: 0px
+  margin-bottom: 5px
+
+a
+  color: $main-color
+  text-decoration: none
+
+  &:hover
+    text-decoration: underline
+  &:visited
+    color: $main-color

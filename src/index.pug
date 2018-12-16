@@ -21,27 +21,25 @@ html(lang="en")
     title.
       marcos ferreira - #{description}
   body
-    header
+    img(src="~@/images/me.jpg")
+    main
       h1 hi, I'm marcos ferreira
       p #{description}
       p
         abbr(title="more learning than breaking tho :)")
           em always learning and breaking things
-    main
-      img(src="~@/images/me.jpg")
       ul
-          li #[a(href="//linkedin.com/in/mracos") linkedin]
-          li #[a(href="//github.com/mracos") github]
-          li #[a(href="//gitlab.com/mracos") gitlab]
-          li #[a(href="//wakatime.com/mracos") wakatime]
-          li #[a(href="//last.fm/user/mrcsferr") last fm]
-          li #[a(href="//mracos.github.io/resume") resume]
-    footer
+          li #[a(target="_blank" href="//linkedin.com/in/mracos") linkedin]
+          li #[a(target="_blank" href="//github.com/mracos") github]
+          li #[a(target="_blank" href="//gitlab.com/mracos") gitlab]
+          li #[a(target="_blank" href="//wakatime.com/mracos") wakatime]
+          li #[a(target="_blank" href="//last.fm/user/mrcsferr") last fm]
+          li #[a(target="_blank" href="//mracos.github.io/resume") resume]
       p got something to say? #[a(href="mailto:marcosp4f@gmail.com") don't let your dreams be dreams]
       p.
-       this website is powered by
-        #[abbr(title="like sass, pub, webpack (and thank god no js)") shiny web technologies]
-        &trade;
+        this website is powered by
+        #[a(target="_blank" href="//github.com/mracos/mracos.github.io") shiny web technologies]
+            &trade;
 
   if NODE_ENV == 'production'
     script(type="text/javascript" src="https://www.google-analytics.com/analytics.js" async defer)
