@@ -15,8 +15,8 @@ body
   display: flex
   font-family: Geneva, Lucida Sans Unicode
   width: $mobile-breakpoint
-  margin-left: auto
-  margin-right: auto
+  margin: auto
+  min-height: 100vh
   font-size: $text-size
 
   @media screen and (max-width: $mobile-breakpoint)
@@ -33,11 +33,10 @@ img
   display: block
   height: 490px
   box-shadow: 2px 2px 15px grey
-  margin: 10px
+  margin: auto
 
   @media screen and (max-width: $mobile-breakpoint)
-    margin-left: auto
-    margin-right: auto
+    margin-bottom: 10px
 
 ul
   list-style: none
