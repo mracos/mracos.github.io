@@ -1,4 +1,4 @@
-- var description = "fullstack developer that is more devops than designer"
+- var description = "0.5x engineer without CREA"
 - var main_color = '#6639a6'
 
 doctype html
@@ -19,26 +19,18 @@ html(lang="en")
     include pug/meta/twitter.pug
 
     title.
-      marcos ferreira - #{description}
+      marcos - #{description}
   body
-    img(src="~@/images/me.jpg")
     main
-      h1 hi, I'm marcos ferreira
-      p #{description}
-      p
-        abbr(title="more learning than breaking tho :)")
-          em always learning and breaking things
-      ul
-          li #[a(target="_blank" href="//linkedin.com/in/mracos") linkedin]
-          li #[a(target="_blank" href="//github.com/mracos") github]
-          li #[a(target="_blank" href="//gitlab.com/mracos") gitlab]
-          li #[a(target="_blank" href="//wakatime.com/mracos") wakatime]
-          li #[a(target="_blank" href="//last.fm/user/mrcsferr") last fm]
-          li #[a(target="_blank" href="//mracos.github.io/resume") resume]
-      p got something to say? #[a(href="mailto:marcosp4f@gmail.com") don't let your dreams be dreams]
+      h1 hi, I'm marcos
+      p a #{description}
+      div.
+        #[a(target="_blank" href="//linkedin.com/in/mracos") linkedin]
+        - #[a(target="_blank" href="//github.com/mracos") github]
+        - #[a(target="_blank" href="//gitlab.com/mracos") gitlab]
       p.
         this website is powered by
-        #[a(target="_blank" href="//github.com/mracos/mracos.github.io") shiny web technologies]
+        #[a(target="_blank" href="//github.com/mracos/mracos.github.io") shiny web scaled event source DDD microservices]
             &trade;
 
   if NODE_ENV == 'production'
